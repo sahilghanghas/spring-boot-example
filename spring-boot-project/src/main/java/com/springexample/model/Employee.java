@@ -5,35 +5,32 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Employee {
-
     @Value("1")
-    private int empId;
+    private int empid;
     @Value("Sahil")
-    private String empName;
-
+    private String empname;
     public Employee() {
         System.out.println("Employee Constructor");
     }
-
-    public Employee(int empId, String empName) {
+    public Employee(int empid, String empname) {
         super();
-        this.empId = empId;
-        this.empName = empName;
+        this.empid = empid;
+        this.empname = empname;
     }
-
-    public int getEmpId() {
-        return empId;
+    public int getEmpid() {
+        return empid;
     }
-
-    public void setEmpId(int empId) {
-        this.empId = empId;
+    public void setEmpid(int empid) {
+        this.empid = empid;
     }
-
-    public void setEmpName(String empName) {
-        this.empName = empName;
+    public String getEmpname() {
+        return empname;
     }
-
-    public String getEmpName() {
-        return empName;
+    public void setEmpname(String empname) {
+        this.empname = empname;
+    }
+    @Override
+    public String toString() {
+        return "Employee [empid=" + empid + ", empname=" + empname + "]";
     }
 }
